@@ -1,1 +1,58 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact — Abuzar</title><style>@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;600;700;800&display=swap');:root{--bg:#0a0b0d;--p:#14161b;--ink:#f4f3ee;--muted:#989ca4;--line:#2b2e34;--a:#c7ff4b}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Manrope,sans-serif}.wrap{max-width:1130px;margin:auto;padding:0 28px}nav{padding:20px 0;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:800;letter-spacing:-.08em}.brand i{color:var(--a);font-style:normal}a{color:inherit;text-decoration:none}.back{font:12px 'DM Mono';color:var(--muted)}.hero{padding:78px 0 54px;max-width:810px}.eyebrow{font:11px 'DM Mono';letter-spacing:.1em;color:var(--a)}h1{font-size:clamp(55px,9vw,112px);line-height:.9;letter-spacing:-.08em;margin:16px 0 24px}p{color:var(--muted);font-size:18px}.grid{display:grid;grid-template-columns:1.25fr .75fr;gap:16px;padding-bottom:80px}.form,.aside{background:var(--p);border:1px solid var(--line);border-radius:14px;padding:25px}label{display:block;font:11px 'DM Mono';color:var(--muted);margin:18px 0 7px}input,textarea,select{width:100%;background:#0d0f13;border:1px solid var(--line);border-radius:7px;padding:12px;color:var(--ink);font:14px Manrope}textarea{min-height:132px;resize:vertical}button{margin-top:18px;border:0;border-radius:8px;padding:12px 15px;background:var(--a);color:#111;font-weight:800;cursor:pointer}.aside h2{font-size:23px;letter-spacing:-.05em}.aside a{display:block;margin:18px 0;color:var(--a)}.hint{font-size:12px;margin-top:14px}@media(max-width:700px){.grid{grid-template-columns:1fr}.hero{padding-top:45px}}</style></head><body><div class="wrap"><nav><a href="index.html" class="brand">ABUZAR<i>·</i></a><a href="index.html" class="back">← PORTFOLIO</a></nav><main><section class="hero"><div class="eyebrow">OPEN TO PRODUCT CONVERSATIONS</div><h1>Let’s build what’s next.</h1><p>Have a product challenge, a role, or an idea worth pressure-testing? Leave a short note and I’ll have the right context before we speak.</p></section><section class="grid"><form class="form" id="contact-form"><div class="eyebrow">PROJECT BRIEF</div><label for="name">YOUR NAME</label><input id="name" required placeholder="Name"><label for="email">EMAIL</label><input id="email" type="email" required placeholder="you@company.com"><label for="topic">WHAT’S ON YOUR MIND?</label><select id="topic"><option>Product opportunity</option><option>Product role</option><option>AI / GenAI collaboration</option><option>Speaking / community</option><option>Something else</option></select><label for="message">A LITTLE CONTEXT</label><textarea id="message" required placeholder="What are you trying to make better?"></textarea><button>Send project brief →</button><p class="hint" id="confirmation" aria-live="polite">This demo form keeps submissions on this device; connect it to an email or form provider when publishing.</p></form><aside class="aside"><div class="eyebrow">DIRECT CHANNELS</div><h2>Prefer a familiar channel?</h2><p>For professional opportunities and product conversations, LinkedIn is the quickest way to connect.</p><a href="https://linkedin.com/in/abuzarahmedsiddiqui" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a><a href="https://github.com/abuzarsiddiqui" target="_blank" rel="noreferrer">Explore GitHub ↗</a><p class="hint">Interested in: Product · AI · SaaS · Enterprise · Building</p></aside></section></main></div><script>document.getElementById('contact-form').onsubmit=e=>{e.preventDefault();document.getElementById('confirmation').textContent='Thanks—your brief is ready to send. Connect this form to your preferred email or form service before publishing.'}</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Abuzar Ahmed Siddiqui</title>
+  <meta name="description" content="Get in touch with Abuzar Ahmed Siddiqui about product roles, collaborations and AI.">
+  <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav"><div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">A</span>Abuzar Siddiqui</a>
+    <nav class="links" aria-label="Primary"><a href="index.html#work">Work</a><a href="index.html#approach">Approach</a><a href="index.html#experience">Experience</a><a href="blog.html">Writing</a><a href="education.html">Education</a></nav>
+    <div class="nav-end">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/></svg></button>
+      <a class="btn primary small" href="contact.html" aria-current="page">Get in touch</a>
+    </div>
+  </div></header>
+
+  <main id="main"><div class="wrap">
+    <section class="page-hero reveal">
+      <div class="eyebrow accent">Open to product conversations</div>
+      <h1 class="display">Let’s build what’s <em>next</em>.</h1>
+      <p class="lede">Have a product challenge, a role, or an idea worth pressure-testing? Leave a short note and I’ll have the right context before we speak.</p>
+    </section>
+    <div class="contact">
+      <form class="panel reveal" id="contact-form" action="https://formsubmit.co/abuzarahmedsiddiqui@gmail.com" method="POST">
+        <div class="eyebrow">Project brief</div>
+        <input type="hidden" name="_subject" value="New portfolio contact message">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+        <div class="two">
+          <div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="Jane Doe" autocomplete="name"></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@company.com" autocomplete="email"></div>
+        </div>
+        <div class="field"><label for="topic">What’s on your mind?</label><select id="topic" name="topic"><option>Product opportunity</option><option>Product role</option><option>AI / GenAI collaboration</option><option>Speaking / community</option><option>Something else</option></select></div>
+        <div class="field"><label for="message">A little context</label><textarea id="message" name="message" required placeholder="What are you trying to make better?"></textarea></div>
+        <button class="btn primary" type="submit" style="margin-top:24px">Send message <span class="arr">→</span></button>
+        <p class="hint">Messages go straight to Abuzar’s inbox. Your email is only used to reply to this enquiry.</p>
+      </form>
+      <aside class="panel reveal">
+        <div class="eyebrow">Direct channels</div>
+        <h2 class="display" style="font-size:36px;margin:12px 0 10px">Prefer a familiar channel?</h2>
+        <p class="muted" style="margin:0 0 20px">For professional opportunities and product conversations, LinkedIn is the quickest way to reach me.</p>
+        <a class="channel" href="https://linkedin.com/in/abuzarahmedsiddiqui" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+        <a class="channel" href="https://github.com/abuzarsiddiqui" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+        <p class="hint">Interested in: Product · AI · SaaS · Enterprise · Building</p>
+      </aside>
+    </div>
+  </div></main>
+
+  <footer><div class="wrap"><span>© 2026 Abuzar Ahmed Siddiqui</span><nav aria-label="Footer"><a href="https://linkedin.com/in/abuzarahmedsiddiqui" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/abuzarsiddiqui" target="_blank" rel="noreferrer">GitHub</a><a href="contact.html">Contact</a></nav></div></footer>
+  <script src="site.js"></script>
+</body>
+</html>

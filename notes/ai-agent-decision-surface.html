@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The useful AI agent is a decision surface, not another dashboard. — Abuzar Ahmed Siddiqui</title>
+  <meta name="description" content="An agent earns trust by making its evidence, confidence and unanswered questions visible — not by summarising more data.">
+  <meta property="og:title" content="The useful AI agent is a decision surface, not another dashboard.">
+  <meta property="og:description" content="An agent earns trust by making its evidence, confidence and unanswered questions visible — not by summarising more data.">
+  <meta property="og:type" content="article">
+  <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav"><div class="wrap">
+    <a class="brand" href="../index.html"><span class="mark">A</span>Abuzar Siddiqui</a>
+    <nav class="links" aria-label="Primary"><a href="../index.html#work">Work</a><a href="../index.html#approach">Approach</a><a href="../index.html#experience">Experience</a><a href="../blog.html" aria-current="page">Writing</a><a href="../education.html">Education</a></nav>
+    <div class="nav-end">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/></svg></button>
+      <a class="btn primary small" href="../contact.html">Get in touch</a>
+    </div>
+  </div></header>
+
+  <main id="main"><article class="wrap article">
+    <a class="link back" href="../blog.html">← All writing</a>
+    <div class="eyebrow accent">AI Product Management · 3 min read · October 2026</div>
+    <h1 class="display">The useful AI agent is a decision surface, not another dashboard.</h1>
+    <p class="lede">An agent earns trust by making its evidence, confidence and unanswered questions visible — not by summarising more data.</p>
+    <div class="byline"><img src="../abuzar-siddiqui-headshot.jpg" alt="" width="40" height="40"><div><b>Abuzar Ahmed Siddiqui</b><span>AI Product Manager</span></div></div>
+    <div class="prose">
+<p>Most teams don’t have a data problem. They have an attention problem. Jira knows which tickets are stale. The QA sheet knows which test cases failed. GitHub knows which pull requests have been open for a week. The information already exists — it is just spread across five tools and three meetings, and nobody has the time to stitch it together before the sprint review.</p>
+<p>So when teams first imagine an AI agent for product work, they usually imagine a smarter dashboard: more charts, more widgets, a summary at the top. That instinct is understandable, and it is almost always wrong.</p>
+
+<h2>Dashboards report. Agents should decide what deserves attention.</h2>
+<p>A dashboard shows you everything and leaves the interpretation to you. That works when you have time to look. It fails at exactly the moment you need it most — when the release is close, the backlog is noisy and five things look urgent.</p>
+<p>The useful agent does the opposite. It narrows. Instead of “here are 214 issues”, it says “three stories in this sprint have no acceptance criteria, and one of them blocks the release”. It turns a surface of data into a short list of decisions, each one small enough to act on.</p>
+<blockquote>The question an agent should answer is not “what is happening?” but “what needs a human decision right now — and why?”</blockquote>
+
+<h2>Trust comes from showing the evidence</h2>
+<p>An AI answer without a source is an opinion. In product work, an unsourced opinion is worse than useless, because it sounds confident and people act on it.</p>
+<p>When I built the AI PM Agent, the rule I cared about most was simple: every claim cites the ticket ID or spreadsheet row behind it. If the agent says a story is at risk, you can click through and check. That one constraint changes the relationship. The agent stops being an oracle and becomes a colleague who shows their working.</p>
+<p>It also makes the agent easier to correct. When a claim is wrong, you can see which data it came from — a mislabelled status, a duplicate ticket — and fix the input instead of arguing with the output.</p>
+
+<h2>Uncertainty is a feature, not a failure</h2>
+<p>Real data is messy. A QA row might map to two different stories. A ticket might be stale because it is abandoned, or because the work is happening in a branch nobody linked. A good agent says so.</p>
+<p>“I’m not sure whether this failed test belongs to PAY-112 or PAY-118 — which one?” is a far better answer than a silent guess. Asking costs the PM five seconds. A wrong guess can cost a release.</p>
+<p>The same goes for gaps. If the agent can’t answer from connected data, it should say that plainly rather than filling the gap with something plausible. Plausible is the most dangerous thing an AI system can be.</p>
+
+<h2>Humans approve the irreversible</h2>
+<p>An agent that drafts a story is helpful. An agent that silently creates fifty tickets in Jira is a cleanup project. The line I draw is reversibility: the agent can read, reason and draft freely, but anything that changes a system of record waits for explicit approval.</p>
+<p>This sounds like a limitation. In practice it is what makes people willing to use the agent at all. Nobody delegates to a tool they have to audit afterwards.</p>
+
+<h2>What this means for anyone building one</h2>
+<ul>
+<li><strong>Design for the decision, not the data.</strong> Start from the three or four calls a PM makes every week and work backwards to the signals each one needs.</li>
+<li><strong>Cite everything.</strong> If a claim can’t point to a source, it shouldn’t be shown.</li>
+<li><strong>Make uncertainty explicit.</strong> Ask instead of guessing, and say “I don’t know” when the data doesn’t cover it.</li>
+<li><strong>Keep humans on the irreversible steps.</strong> Draft freely; write only with approval.</li>
+</ul>
+<p>The goal isn’t an agent that knows everything. It is an agent that tells you, honestly and with evidence, where to look next.</p>
+</div>
+    <aside class="article-end">
+      <div><b>Enjoyed this?</b><span>I share product notes like this on LinkedIn.</span></div>
+      <div class="actions" style="margin:0"><a class="btn primary small" href="https://www.linkedin.com/in/abuzarahmedsiddiqui/" target="_blank" rel="noreferrer">Follow on LinkedIn ↗</a><a class="btn small" href="../contact.html">Get in touch</a></div>
+    </aside>
+    <a class="next" href="enterprise-more-control.html"><span class="eyebrow">Next note</span><b>What enterprise customers mean when they ask for “more control.”</b></a>
+  </article></main>
+
+  <footer><div class="wrap"><span>© 2026 Abuzar Ahmed Siddiqui</span><nav aria-label="Footer"><a href="https://linkedin.com/in/abuzarahmedsiddiqui" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/abuzarsiddiqui" target="_blank" rel="noreferrer">GitHub</a><a href="../contact.html">Contact</a></nav></div></footer>
+  <script src="../site.js"></script>
+</body>
+</html>

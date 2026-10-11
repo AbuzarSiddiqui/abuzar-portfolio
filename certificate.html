@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Certificate of Completion — Abuzar Ahmed Siddiqui</title>
+  <meta name="description" content="Certificate of completion for a course by Abuzar Ahmed Siddiqui.">
+  <meta property="og:title" content="Certificate of Completion — Abuzar Ahmed Siddiqui">
+  <meta property="og:description" content="Certificate of completion for a course by Abuzar Ahmed Siddiqui.">
+  <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav"><div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">A</span>Abuzar Siddiqui</a>
+    <nav class="links" aria-label="Primary"><a href="index.html#work">Work</a><a href="index.html#approach">Approach</a><a href="index.html#experience">Experience</a><a href="blog.html">Writing</a><a href="courses.html" aria-current="page">Courses</a><a href="education.html">Education</a></nav>
+    <div class="nav-end">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/></svg></button>
+      <a class="btn primary small" href="contact.html">Get in touch</a>
+    </div>
+  </div></header>
+
+  <main id="main"><div class="wrap cert-page">
+    <div id="cert-error" class="page-hero" hidden><h1 class="display">Certificate not found.</h1><p class="lede">This link looks incomplete. <a class="link" href="courses.html">Browse the courses →</a></p></div>
+    <div id="cert-view" hidden>
+      <div class="certificate" id="cert">
+        <div class="cert-top"><span class="brand"><span class="mark">A</span>Abuzar Siddiqui</span><span class="eyebrow">Certificate ID <b id="c-id"></b></span></div>
+        <div class="eyebrow accent">Certificate of completion</div>
+        <p class="cert-small">This certifies that</p>
+        <h1 class="display" id="c-name"></h1>
+        <p class="cert-small">has successfully completed the course</p>
+        <h2 id="c-course"></h2>
+        <p class="cert-small" id="c-meta"></p>
+        <div class="cert-foot">
+          <div><span class="sig">Abuzar Ahmed Siddiqui</span><span class="cert-small">Course author · AI Product Manager</span></div>
+          <div class="seal" aria-hidden="true">✦</div>
+          <div style="text-align:right"><b id="c-date"></b><span class="cert-small">abuzarsiddiqui.in/courses</span></div>
+        </div>
+      </div>
+      <div class="actions cert-actions">
+        <button class="btn primary" onclick="print()">Download as PDF</button>
+        <a class="btn li-follow" id="c-linkedin" target="_blank" rel="noreferrer">Add to LinkedIn profile ↗</a>
+        <button class="btn" id="c-copy">Copy certificate link</button>
+        <a class="btn" id="c-back">Back to course</a>
+      </div>
+      <p class="hint">Certificate of completion issued by Abuzar Ahmed Siddiqui. Not an accredited qualification. Use “Download as PDF” and choose “Save as PDF” in the print dialog.</p>
+    </div>
+  </div></main>
+
+  <footer><div class="wrap"><span>© 2026 Abuzar Ahmed Siddiqui</span><nav aria-label="Footer"><a href="https://linkedin.com/in/abuzarahmedsiddiqui" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/abuzarsiddiqui" target="_blank" rel="noreferrer">GitHub</a><a href="contact.html">Contact</a></nav></div></footer>
+  <script src="site.js"></script>
+  <script>
+    const TITLES = {"foundations-of-ai": "Foundations of AI", "claude-code-for-professionals": "Claude Code: How AI Agents Change Your Work", "ai-apis-compared": "AI APIs Compared: Claude, Gemini, NVIDIA & Open Models", "token-optimization-cost-efficiency": "Token Optimization & AI Cost Efficiency", "ai-product-management": "AI Product Management"}, HOURS = {"foundations-of-ai": "1.5 hours", "claude-code-for-professionals": "1 hour", "ai-apis-compared": "1.5 hours", "token-optimization-cost-efficiency": "1.5 hours", "ai-product-management": "1.5 hours"};
+    // Details live in the URL fragment (#c=..&n=..&d=..), which is never sent to the server.
+    const p = new URLSearchParams(location.hash.slice(1)), c = p.get('c'), n = (p.get('n') || '').trim(), d = p.get('d') || '';
+    if (!TITLES[c] || !n || !/^\d{4}-\d{2}-\d{2}$/.test(d)) document.getElementById('cert-error').hidden = false;
+    else {
+      // FNV-1a hash → short, stable ID for this name + course + date.
+      let h = 2166136261; for (const ch of c + '|' + n + '|' + d) { h ^= ch.codePointAt(0); h = Math.imul(h, 16777619) >>> 0; }
+      const id = 'AS-' + h.toString(36).toUpperCase().padStart(7, '0');
+      const date = new Date(d + 'T00:00:00');
+      const $ = x => document.getElementById(x);
+      $('c-name').textContent = n; $('c-course').textContent = TITLES[c]; $('c-id').textContent = id;
+      $('c-meta').textContent = 'A self-paced course · ' + HOURS[c] + ' · final assessment passed';
+      $('c-date').textContent = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+      $('c-back').href = 'courses/' + c + '.html';
+      $('c-linkedin').href = 'https://www.linkedin.com/profile/add?' + new URLSearchParams({ startTask: 'CERTIFICATION_NAME', name: TITLES[c], organizationName: 'Abuzar Ahmed Siddiqui', issueYear: date.getFullYear(), issueMonth: date.getMonth() + 1, certUrl: location.href, certId: id });
+      $('c-copy').onclick = () => navigator.clipboard.writeText(location.href).then(() => $('c-copy').textContent = 'Link copied ✓');
+      document.title = n + ' — ' + TITLES[c] + ' certificate';
+      $('cert-view').hidden = false;
+    }
+  </script>
+</body>
+</html>

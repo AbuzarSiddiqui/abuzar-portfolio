@@ -230,8 +230,10 @@ def write(path, text):
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, 'w', encoding='utf-8', newline='\n').write(text)
 
-for c in COURSES:
-    write(f'courses/{c["slug"]}.html', course_page(c))
-write('courses.html', catalog())
-write('certificate.html', certificate())
-print('built', len(COURSES), 'courses:', ', '.join(c['slug'] for c in COURSES))
+if __name__ == '__main__':
+    for c in COURSES:
+        write(f'courses/{c["slug"]}.html', course_page(c))
+    write('courses.html', catalog())
+    write('certificate.html', certificate())
+    print('built', len(COURSES), 'courses:', ', '.join(c['slug'] for c in COURSES))
+    import seo; seo.main()

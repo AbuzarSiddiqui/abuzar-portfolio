@@ -63,10 +63,10 @@ hr.rule{border:0;border-top:1px solid var(--line);margin:0}
 
 /* Hero */
 .hero{padding:56px 0 88px;display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(42px,5.2vw,76px);margin:28px 0 22px}
+.hero-title{font-size:clamp(42px,5.2vw,76px);margin:28px 0 22px}
 .who{display:flex;align-items:center;gap:14px}
 .who img{width:64px;height:64px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px var(--bg),0 0 0 4px var(--line)}
-.who b{display:block;font-weight:600;letter-spacing:-.01em}
+.who-name{display:block;margin:0;font-size:16px;font-weight:600;letter-spacing:-.01em}
 .who span{color:var(--muted);font-size:14px}
 .status{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:6px 12px 6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:13px;color:var(--ink-2)}
 .dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 20%,transparent);animation:pulse 2.4s ease-in-out infinite}
@@ -295,7 +295,7 @@ footer nav{display:flex;gap:20px}footer a:hover{color:var(--ink)}
   .links a{padding:6px 0}
   section{padding:64px 0}
   .hero{padding:28px 0 56px}
-  .hero h1{font-size:clamp(38px,11vw,48px);margin:22px 0 16px}
+  .hero-title{font-size:clamp(38px,11vw,48px);margin:22px 0 16px}
   .lede{font-size:17px}
   .actions .btn{flex:1 1 100%;justify-content:center;height:50px}
   .status{font-size:12px;align-items:flex-start;border-radius:14px;padding:8px 12px}

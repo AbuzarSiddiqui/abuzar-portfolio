@@ -45,7 +45,7 @@
             <div class="ui-bar"><i></i><i></i><i></i><span>PM Agent — launch film</span></div>
             <div class="film-frame">
               <video id="film" src="pm-agent-film.mp4" poster="pm-agent-film-poster.jpg" muted loop playsinline controls preload="metadata" aria-label="PM Agent launch film"></video>
-              <button class="sound" id="sound" hidden>🔊 Watch with sound</button>
+              <div class="film-btns"><button class="sound" id="sound" hidden>🔊 Watch with sound</button><button class="sound" id="full" aria-label="Watch full screen" title="Full screen"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4"/></svg> Full screen</button></div>
             </div>
           </div>
           <figcaption><span class="badge">LAUNCH FILM</span> The AI PM Agent in 83 seconds · fictional demo workspace</figcaption>
@@ -258,7 +258,14 @@
     show('Sprint Health');
 
     // Launch film: muted autoplay (the only kind browsers allow); reduced-motion users keep native controls.
-    const film=$('film'), sound=$('sound');
+    const film=$('film'), sound=$('sound'), full=$('full'), autoplayed=!matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Full screen: native controls and sound while full screen; back to the muted loop on exit. iOS only supports webkitEnterFullscreen.
+    full.onclick=()=>{
+      film.controls=true; film.muted=false; film.play(); sound.textContent='🔇 Mute';
+      if(film.requestFullscreen) film.requestFullscreen().catch(e=>console.warn('Full screen refused:',e.message)); else if(film.webkitEnterFullscreen) film.webkitEnterFullscreen();
+    };
+    const exitFull=()=>{if(document.fullscreenElement)return; film.controls=!autoplayed; sound.textContent=film.muted?'🔊 Watch with sound':'🔇 Mute'};
+    document.addEventListener('fullscreenchange',exitFull); film.addEventListener('webkitendfullscreen',exitFull);
     if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
       film.controls=false; sound.hidden=false; film.play().catch(()=>film.controls=true);
       sound.onclick=()=>{film.muted=!film.muted; if(!film.muted){film.currentTime=0;film.play()} sound.textContent=film.muted?'🔊 Watch with sound':'🔇 Mute'};

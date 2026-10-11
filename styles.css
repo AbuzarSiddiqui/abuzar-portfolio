@@ -76,8 +76,10 @@ hr.rule{border:0;border-top:1px solid var(--line);margin:0}
 .film .ui{max-width:none}
 .film-frame{position:relative;background:#f4f5f2}
 .film video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
-.sound{position:absolute;right:12px;bottom:12px;padding:8px 12px;border-radius:999px;background:#000a;color:#fff;font-size:12px;font-weight:500;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.film-btns{position:absolute;right:12px;bottom:12px;display:flex;gap:8px}
+.sound{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;background:#000a;color:#fff;font-size:12px;font-weight:500;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .sound:hover{background:#000c}
+.sound[hidden]{display:none}
 .film figcaption{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px;font-size:14px;color:var(--muted)}
 
 /* Logos / proof strip */

@@ -119,7 +119,7 @@ def process(path):
     return url
 
 def main():
-    pages = sorted(['index.html'] + [p for p in glob.glob('*.html', root_dir=ROOT) if p != 'index.html']
+    pages = sorted(['index.html'] + [p for p in glob.glob('*.html', root_dir=ROOT) if p != 'index.html' and not p.startswith('google')]
                    + [p.replace('\\', '/') for p in glob.glob('notes/*.html', root_dir=ROOT) + glob.glob('courses/*.html', root_dir=ROOT)])
     entries = []
     for p in pages:

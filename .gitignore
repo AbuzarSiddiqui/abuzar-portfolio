@@ -1,1 +1,4 @@
 .vercel
+# Confidential case-study source files must never be committed. Only the encrypted .enc payload is public.
+assets/*.pdf
+assets/*source*

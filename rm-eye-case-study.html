@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Confidential case study — Abuzar Siddiqui</title>
+  <meta name="description" content="A confidential portfolio case study. Access is restricted.">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="theme-color" content="#f6f5f1">
+  <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" sizes="48x48"><link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
+</head>
+<body class="private-case-page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav"><div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">A</span>Abuzar Siddiqui</a>
+    <div class="nav-end"><button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/></svg></button><a class="btn small" href="index.html">Portfolio</a></div>
+  </div></header>
+
+  <main id="main" class="private-case wrap">
+    <section class="private-case-hero">
+      <div class="eyebrow accent">Restricted portfolio material</div>
+      <h1 class="display">Confidential case study.</h1>
+      <p class="lede">This document is encrypted and can only be opened with the access code supplied by Abuzar.</p>
+    </section>
+
+    <section id="access-panel" class="access-panel" aria-labelledby="access-title">
+      <div class="lock-glyph" aria-hidden="true">⌁</div>
+      <div><h2 id="access-title">Enter access code</h2><p>The code is never sent to a server. It is used only in this browser to decrypt the document.</p></div>
+      <form id="access-form" novalidate>
+        <label for="access-code">Access code</label>
+        <div class="access-entry"><input id="access-code" name="access-code" type="password" inputmode="text" autocomplete="current-password" required aria-describedby="access-message"><button class="btn primary" type="submit">Open case study <span class="arr">↗</span></button></div>
+        <p id="access-message" class="access-message" role="status" aria-live="polite">Enter the code to continue.</p>
+      </form>
+    </section>
+
+    <section id="document-panel" class="document-panel" hidden aria-label="Decrypted confidential case study">
+      <div class="document-toolbar"><div><div class="eyebrow accent">Secure session</div><h2>Case study unlocked</h2></div><div class="document-actions"><a id="download-document" class="btn small" download="Abuzar-Siddiqui-RM-EYE-PM-Assignment.pdf">Download PDF <span class="arr">↓</span></a><button id="lock-document" class="btn small" type="button">Lock document</button></div></div>
+      <object id="case-study-document" class="case-study-document" type="application/pdf" aria-label="Confidential case study PDF"><p>Your browser cannot show this PDF inline. Use the download button above.</p></object>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>© 2026 Abuzar Siddiqui</span><span>Confidential materials are shared by permission only.</span></div></footer>
+  <script src="site.js"></script><script src="rm-eye-case-study.js"></script>
+</body>
+</html>

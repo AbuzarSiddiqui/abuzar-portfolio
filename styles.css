@@ -202,6 +202,16 @@ a.post:hover h3{color:var(--accent)}
 .next:hover{border-color:var(--accent)}
 .next b{display:block;margin-top:8px;font:400 26px/1.2 var(--serif)}
 
+/* Confidential case study */
+.private-work .card-visual{background:linear-gradient(145deg,#10131d,#242c4a)}
+.private-visual{display:grid;place-items:center;padding:36px}
+.private-file{width:min(100%,310px);padding:28px;border:1px solid #ffffff36;border-radius:18px;color:#f8f8f5;background:#ffffff0d;box-shadow:0 22px 50px #0005;display:grid;gap:10px;backdrop-filter:blur(8px)}
+.private-file>span:nth-child(2){font:500 11px var(--mono);letter-spacing:.14em;color:#b7c1ff}.private-file b{font:400 34px/1.05 var(--serif)}.private-file small{color:#c8cce0}
+.private-lock{font:400 40px/1 var(--serif);color:#fff}
+.private-case{min-height:calc(100vh - 190px);padding-top:72px;padding-bottom:100px}.private-case-hero{max-width:720px;margin:0 auto 40px;text-align:center}.private-case-hero h1{font-size:clamp(48px,8vw,94px);margin:14px 0 18px}.private-case-hero .lede{margin:0 auto}
+.access-panel{max-width:680px;margin:0 auto;padding:36px;border:1px solid var(--line);border-radius:24px;background:var(--surface);box-shadow:var(--shadow);display:grid;grid-template-columns:auto 1fr;gap:12px 20px}.lock-glyph{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font:400 30px/1 var(--serif)}.access-panel h2{margin:2px 0 6px;font:400 30px/1.1 var(--serif)}.access-panel p{margin:0;color:var(--muted)}.access-panel form{grid-column:1/-1;margin-top:12px}.access-panel label{display:block;margin:0 0 8px;font-size:14px;font-weight:600}.access-entry{display:flex;gap:10px}.access-entry input{min-width:0;flex:1;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:16px var(--sans)}.access-entry input:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}.access-entry button:disabled{opacity:.65;cursor:wait}.access-message{min-height:20px;margin:12px 0 0!important;font-size:13px}.access-message.is-error{color:#c62f2f}
+.document-panel{max-width:1160px;margin:0 auto}.document-toolbar{display:flex;justify-content:space-between;align-items:center;gap:24px;margin:0 0 16px}.document-toolbar h2{margin:5px 0 0;font:400 32px/1.1 var(--serif)}.document-actions{display:flex;gap:10px;flex-wrap:wrap}.case-study-document{display:block;width:100%;height:min(78vh,940px);border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+
 /* LinkedIn profile card */
 .li-card{border:1px solid var(--line);border-radius:28px;background:var(--surface);overflow:hidden;box-shadow:var(--shadow)}
 .li-cover{position:relative;min-height:180px;padding:28px 32px;display:flex;align-items:flex-end;color:#fff;
@@ -328,6 +338,7 @@ footer nav{display:flex;gap:20px}footer a:hover{color:var(--ink)}
   .li-main img{width:112px;height:112px;margin-top:-56px}
   .li-main h3{font-size:22px}
   .panel{padding:24px}
+  .private-case{padding-top:48px;padding-bottom:72px}.access-panel{padding:24px;grid-template-columns:1fr}.access-entry{flex-direction:column}.access-entry .btn{justify-content:center}.document-toolbar{align-items:flex-start;flex-direction:column}.document-toolbar h2{font-size:28px}.document-actions{width:100%}.document-actions .btn{flex:1;justify-content:center}.case-study-document{height:68vh;border-radius:12px}
   .cta{padding:100px 0}
   .kpi b{font-size:34px}
 }
